@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import fakeRecipies from "../../utils/fakeRecipies";
+import fakeRecommendations from "../../utils/fakeRecommendations";
 import "./style.css";
 
 export default function Home() {
@@ -47,7 +49,7 @@ export default function Home() {
           {" "}
           <div className="recipes">
             <h1 className="recipes-title">Top selection</h1>
-            {fakeRecipes.map((item, index) => {
+            {fakeRecipies.map((item, index) => {
               return (
                 <div className="recipe">
                   {renderImage(item)}
