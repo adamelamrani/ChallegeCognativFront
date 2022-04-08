@@ -1,0 +1,12 @@
+My first has been to modularise Home page and extract from it two components and two arrays.
+
+  -Utils:
+    I decided to create a new folder named "utils" with a corresponding file for each variable: fakeRecipies and fakeRecommendations. 
+    After creating each file, each variable has been exported to its corresponding component.
+
+  -Components:
+    Home.jsx was overloaded with a lot of responsibilities that could be extracted into new components. Thus, I created "components" folder where the components will have each own folder.
+    Separating functions from Home.jsx into smaller components, everything is easier to read and, easier to correct (in case of bugs) and it's more scalable.
+    In each folder there will be an extra file which will be its corresponding styled-components file.
+    
+

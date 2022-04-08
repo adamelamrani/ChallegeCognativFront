@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import fakeRecipies from "../../utils/fakeRecipies";
-import fakeRecommendations from "../../utils/fakeRecommendations";
+import Recipies from "../../components/Recipies/Recipies";
+import RecommendedRecipies from "../../components/RecommendedRecipies/RecommendedRecipies";
 import "./style.css";
 
 export default function Home() {
@@ -19,23 +19,6 @@ export default function Home() {
     return <img className="recommended-image" src={imageUrl} />;
   }
 
-  function renderRecommended() {
-    return (
-      <div>
-        <h1 className="title">Recommended</h1>
-        <div className="recommendations">
-          {fakeRecommendations.map((item, index) => {
-            return (
-              <Link to="/detail" key={index}>
-                {renderImageBox(item)}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div>
       <div className="header">
@@ -44,33 +27,11 @@ export default function Home() {
         </Link>
       </div>
       <div className="page">
-        <div className="container-top">{renderRecommended()}</div>
+        <div className="container-top">
+          {<RecommendedRecipies renderImageBox={renderImageBox} />}
+        </div>
         <div className="container-bottom">
-          {" "}
-          <div className="recipes">
-            <h1 className="recipes-title">Top selection</h1>
-            {fakeRecipies.map((item, index) => {
-              return (
-                <div className="recipe">
-                  {renderImage(item)}
-                  <div className="recipe-info">
-                    <div>
-                      <p className="recipe-category">{item.categoryName}</p>
-                      <h1 className="recipe-name">{item.name}</h1>
-                      <div className="recipe-stuff">
-                        <p className="recipe-time">{item.duration} minutes</p>
-                        <p className="recipe-complexity">{item.complexity}</p>
-                        <p className="recipe-people">{item.people} people</p>
-                      </div>
-                    </div>
-                    <Link className="recipe-button" to="/detail" key={index}>
-                      See more
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <Recipies renderImage={renderImage} />
         </div>
       </div>
     </div>
