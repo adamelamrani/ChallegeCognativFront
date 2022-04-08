@@ -10,3 +10,6 @@ My first has been to modularise Home page and extract from it two components and
     In each folder there will be an extra file which will be its corresponding styled-components file.
     
 
+  -Photo: 
+    I decided to remove the functions renderImage and renderImageBox as I have added a conditional checking if item.photo exists or not.
+    
