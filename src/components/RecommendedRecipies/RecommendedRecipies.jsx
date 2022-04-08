@@ -6,9 +6,9 @@ const RecommendedRecipies = () => {
     <div>
       <h1 className="title">Recommended</h1>
       <div className="recommendations">
-        {fakeRecommendations.map((item, index) => {
+        {fakeRecommendations.map((item) => {
           return (
-            <Link to="/detail" key={index}>
+            <Link to={`/detail/${item._id}`} key={item._id}>
               <img
                 className="recommended-image"
                 alt={`${item.name} recipe`}
