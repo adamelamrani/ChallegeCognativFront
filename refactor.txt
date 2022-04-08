@@ -13,3 +13,6 @@ My first has been to modularise Home page and extract from it two components and
   -Photo: 
     I decided to remove the functions renderImage and renderImageBox as I have added a conditional checking if item.photo exists or not.
     
+  -Details: Extracted the component part from Detail page into DetailsRecipe component. Corrected the details page to always show the data from the selected recipe. To do that, I changed how
+    Link path to add the id of the requested recipe, and the id will be get through params with useParams. After getting the id, the page will filter that id to find the desired recipe and
+    it will pass the data (destructuring it first) through props.

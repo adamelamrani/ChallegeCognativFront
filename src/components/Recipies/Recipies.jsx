@@ -5,7 +5,7 @@ const Recipies = () => {
   return (
     <div className="recipes">
       <h1 className="recipes-title">Top selection</h1>
-      {fakeRecipies.map((item, index) => {
+      {fakeRecipies.map((item) => {
         return (
           <div className="recipe">
             <img
@@ -25,7 +25,11 @@ const Recipies = () => {
                   <p className="recipe-people">{item.people} people</p>
                 </div>
               </div>
-              <Link className="recipe-button" to="/detail" key={index}>
+              <Link
+                className="recipe-button"
+                to={`/detail/${item._id}`}
+                key={item._id}
+              >
                 See more
               </Link>
             </div>
