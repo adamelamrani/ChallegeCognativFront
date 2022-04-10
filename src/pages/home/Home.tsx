@@ -3,7 +3,7 @@ import Recipies from "../../components/Recipies/Recipies";
 import RecommendedRecipies from "../../components/RecommendedRecipies/RecommendedRecipies";
 import "./style.css";
 
-export default function Home() {
+const Home: React.FunctionComponent = (): JSX.Element => {
   return (
     <div>
       <div className="header">
@@ -19,4 +19,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

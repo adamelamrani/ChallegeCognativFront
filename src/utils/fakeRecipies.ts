@@ -1,4 +1,6 @@
-const fakeRecipies = [
+import { RecipiesArray } from "../interfaces/Recipe";
+
+const fakeRecipies: RecipiesArray = [
   {
     _id: "52944",
     name: "Escovitch Fish",

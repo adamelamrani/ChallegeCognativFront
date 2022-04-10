@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import { Recipe } from "../../interfaces/Recipe";
 import fakeRecipies from "../../utils/fakeRecipies";
 
-const RecommendedRecipies = () => {
+const RecommendedRecipies = (): JSX.Element => {
   return (
     <div className="recommended-container">
       <h2 className="title">Recommended</h2>
       <div className="recommendations">
-        {fakeRecipies.map((item) => {
+        {fakeRecipies.map((item: Recipe) => {
           return (
             <Link to={`/detail/${item._id}`} key={item._id}>
               <img
