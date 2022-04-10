@@ -103,3 +103,23 @@ a {
   line-height: 1.5;
   letter-spacing: 0.2px;
 }
+
+.recommended-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommendations {
+  width: 880px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.recommended-image {
+  overflow-y: auto;
+  width: 200px;
+  height: 200px;
+}
