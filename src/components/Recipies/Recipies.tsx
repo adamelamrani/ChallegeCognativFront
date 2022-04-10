@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { Recipe } from "../../interfaces/Recipe";
 import fakeRecipies from "../../utils/fakeRecipies";
+import RecipiesStyleComponent from "./RecipiesStyleComponent";
 
 const Recipies = (): JSX.Element => {
   return (
-    <div className="recipes">
+    <RecipiesStyleComponent className="recipes">
       <h2 className="recipes-title">Top selection</h2>
       {fakeRecipies.map((item: Recipe) => {
         return (
@@ -37,7 +38,7 @@ const Recipies = (): JSX.Element => {
           </div>
         );
       })}
-    </div>
+    </RecipiesStyleComponent>
   );
 };
 
