@@ -61,6 +61,10 @@ const RecipiesStyleComponent = styled.div`
         border-radius: 20px;
       }
 
+      .recipe-arrow {
+        display: none;
+      }
+
       .recipe-button:hover {
         align-self: flex-end;
         background-color: #333;
@@ -78,6 +82,60 @@ const RecipiesStyleComponent = styled.div`
         border-radius: 20px;
         background-color: black;
         transform: scale(0.9);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .recipe {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      width: 90vw;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: #bbb 0px 0px 5px;
+
+      .recipe-image {
+        height: 70%;
+        object-fit: cover;
+      }
+
+      .recipe-info {
+        padding: 5px 30px;
+
+        .recipe-category {
+          font-size: 15px;
+          margin-top: 10px;
+        }
+
+        .recipe-name {
+          font-size: 20px;
+          margin: 0;
+        }
+
+        .recipe-stuff {
+          margin: 0;
+        }
+
+        .recipe-button {
+          display: none;
+        }
+
+        .recipe-arrow {
+          display: flex;
+          align-self: flex-end;
+          height: 50px;
+          width: 50px;
+          position: relative;
+          top: -50px;
+        }
       }
     }
   }

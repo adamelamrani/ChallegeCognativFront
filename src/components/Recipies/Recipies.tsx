@@ -19,8 +19,8 @@ const Recipies = (): JSX.Element => {
             />
             <div className="recipe-info">
               <div>
-                <h1 className="recipe-name">{item.name}</h1>
                 <p className="recipe-category">{item.categoryName}</p>
+                <h1 className="recipe-name">{item.name}</h1>
                 <ul className="recipe-stuff">
                   <li className="recipe-time">{item.duration} minutes</li>
                   <li className="recipe-complexity">{item.complexity}</li>
@@ -33,6 +33,13 @@ const Recipies = (): JSX.Element => {
                 key={item._id}
               >
                 See more
+              </Link>
+              <Link
+                className="recipe-arrow"
+                to={`/detail/${item._id}`}
+                key={item._id}
+              >
+                <img alt="arrow" src="arrow-right-solid.svg" />
               </Link>
             </div>
           </div>
