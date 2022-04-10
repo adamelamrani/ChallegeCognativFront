@@ -38,7 +38,7 @@ const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
           <ul className="ingredients">
             <h2>Ingredients</h2>
             {recipeObject.ingredients.map((ingredient) => (
-              <li key={recipeObject._id}>{ingredient}</li>
+              <li key={`${recipeObject._id}_${ingredient}`}>{ingredient}</li>
             ))}
           </ul>
         </div>
