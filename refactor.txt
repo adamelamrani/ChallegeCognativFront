@@ -39,4 +39,8 @@ My first has been to modularise Home page and extract from it two components and
     Created StyledComponents files for each Component with its corresponding global css rules.
     All the css rules applied to styled components are nested if it's possible. 
     After moving all the global css rules, I have deleted the CSS files as they are no longer required. 
+
+  -Responsive design:
+    Added media query at 600px as requested in the exercice. For it, I have changed some things such as flex direction display in details (from row to column), changed font size to be
+    a bit smaller and fit better, created a new link element which is only showing with media max-width 600px to show an arrow instead of the "see more" button".
     
