@@ -80,6 +80,56 @@ const DetailsStyleComponent = styled.div`
       letter-spacing: 0.2px;
     }
   }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      img {
+        height: 300px;
+        width: 100vw;
+        object-fit: cover;
+        border-radius: 0;
+      }
+
+      .top-information {
+        padding: 10px;
+      }
+
+      .recipe-detail-stuff {
+        width: 100%;
+        justify-content: space-evenly;
+      }
+
+      .top-information .ingredients {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+        list-style: none;
+
+        h2 {
+          align-self: center;
+        }
+      }
+    }
+    .bottom {
+      padding: 20px;
+
+      .description {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
 `;
 
 export default DetailsStyleComponent;

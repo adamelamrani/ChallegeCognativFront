@@ -8,9 +8,9 @@ const RecommendedRecipies = (): JSX.Element => {
     <RecommendedRecipiesStyle className="recommended-container">
       <h2 className="title">Recommended</h2>
       <div className="recommendations">
-        {fakeRecipies.map((item: Recipe) => {
+        {fakeRecipies.map((item: Recipe, index: number) => {
           return (
-            <Link to={`/detail/${item._id}`} key={item._id}>
+            <Link to={`/detail/${item._id}`} key={index}>
               <img
                 className="recommended-image"
                 alt={`${item.name} recipe`}

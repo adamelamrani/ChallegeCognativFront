@@ -20,10 +20,10 @@ const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
           }
         />
         <div className="top-information">
-          <h1 className="recipe-detail-name">{recipeObject.name}</h1>
           <h2 className="recipe-detail-category">
             {recipeObject.categoryName}
           </h2>
+          <h1 className="recipe-detail-name">{recipeObject.name}</h1>
           <ul className="recipe-detail-stuff">
             <li className="recipe-detail-time">
               {recipeObject.duration} minutes
@@ -38,7 +38,7 @@ const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
           <ul className="ingredients">
             <h2>Ingredients</h2>
             {recipeObject.ingredients.map((ingredient) => (
-              <li key={recipeObject._id}>{ingredient}</li>
+              <li key={`${recipeObject._id}_${ingredient}`}>{ingredient}</li>
             ))}
           </ul>
         </div>

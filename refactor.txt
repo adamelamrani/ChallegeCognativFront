@@ -20,9 +20,23 @@ My first has been to modularise Home page and extract from it two components and
     Changed all headings. H1 is only for the recipe name, as it is the most important element semantically speaking. Now headings related to topics have been changed to h2 and subtopics to h3.
 
   -Heading:
-    Moved heading from details to App, as it should be displayed in every page of the app.
+    Created a Layout component containing the heading, and it will wrapp App component. Doing it this way, Heading element will be displayed in every page and will be make our code easier to fix
+    and more scalable, as we can add more features easily such as a footer.
 
   -Recipies: 
     Changed the div containing the info to an unordered list, and <p> elements to list items as it is semantically better in that case.
     Changed order between category and recipe name. Now recipe name will be displayed above the category name.
     Removed fakeData and fakeRecipies in order to avoid repeating unnecessary code. Instead, created a carousel to show recommendations.
+
+  -TypeScript: 
+    Installed TypeScript and changed all the files to its corresponding extension. JSX files are now TSX, and JS files are now TS.
+    Created a tsconfig.json file with basic configuration to be able to run react-jsx with latest ECMAScript version.
+    Created an Interfaces folder with a Recipe interface file. In this file a Recipe interface has been created to type the Recipe data.
+    All the components's return are typed to be JSX.Element.
+    A RecipeObjectProps interface has been created in DetailsRecipe.tsx to type the result of DetailsRecipe props.
+
+  -StyledComponents:
+    Created StyledComponents files for each Component with its corresponding global css rules.
+    All the css rules applied to styled components are nested if it's possible. 
+    After moving all the global css rules, I have deleted the CSS files as they are no longer required. 
+    

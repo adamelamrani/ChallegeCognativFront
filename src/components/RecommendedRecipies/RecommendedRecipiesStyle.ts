@@ -30,6 +30,12 @@ const RecommendedRecipiesStyle = styled.div`
     border-radius: 20px;
     gap: 20px;
   }
+
+  @media (max-width: 600px) {
+    .recommendations {
+      width: 90vw;
+    }
+  }
 `;
 
 export default RecommendedRecipiesStyle;

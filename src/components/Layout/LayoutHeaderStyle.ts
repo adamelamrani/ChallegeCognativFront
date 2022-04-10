@@ -25,6 +25,10 @@ const LayoutHeaderStyle = styled.div`
   a:visited {
     color: inherit;
   }
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export default LayoutHeaderStyle;
