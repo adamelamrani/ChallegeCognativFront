@@ -1,19 +1,17 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/recipe/Detail";
 
-const App: React.FunctionComponent = (): JSX.Element => {
+const App = () => {
   return (
     <>
-      <div className="header">
-        <Link to="/">
-          <h2>Food recipes</h2>
-        </Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path={`/detail/:id`} element={<Detail />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+      </Layout>
     </>
   );
 };

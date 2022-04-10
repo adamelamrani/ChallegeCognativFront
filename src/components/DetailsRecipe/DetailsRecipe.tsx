@@ -1,5 +1,6 @@
 import React from "react";
 import { Recipe } from "../../interfaces/Recipe";
+import DetailsStyleComponent from "./DetailsStyleComponent";
 
 interface RecipeObjectProps {
   recipeObject: Recipe;
@@ -7,7 +8,7 @@ interface RecipeObjectProps {
 
 const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
   return (
-    <div className="page">
+    <DetailsStyleComponent className="page">
       <div className="top">
         <img
           className="details-image"
@@ -46,7 +47,7 @@ const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
         <h3 className="description">Info</h3>
         <p className="description-text">{recipeObject.description}</p>
       </div>
-    </div>
+    </DetailsStyleComponent>
   );
 };
 
