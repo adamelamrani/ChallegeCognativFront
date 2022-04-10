@@ -4,7 +4,7 @@ import fakeRecipies from "../../utils/fakeRecipies";
 const Recipies = () => {
   return (
     <div className="recipes">
-      <h1 className="recipes-title">Top selection</h1>
+      <h2 className="recipes-title">Top selection</h2>
       {fakeRecipies.map((item) => {
         return (
           <div className="recipe">
@@ -17,13 +17,13 @@ const Recipies = () => {
             />
             <div className="recipe-info">
               <div>
-                <p className="recipe-category">{item.categoryName}</p>
                 <h1 className="recipe-name">{item.name}</h1>
-                <div className="recipe-stuff">
-                  <p className="recipe-time">{item.duration} minutes</p>
-                  <p className="recipe-complexity">{item.complexity}</p>
-                  <p className="recipe-people">{item.people} people</p>
-                </div>
+                <p className="recipe-category">{item.categoryName}</p>
+                <ul className="recipe-stuff">
+                  <li className="recipe-time">{item.duration} minutes</li>
+                  <li className="recipe-complexity">{item.complexity}</li>
+                  <li className="recipe-people">{item.people} people</li>
+                </ul>
               </div>
               <Link
                 className="recipe-button"

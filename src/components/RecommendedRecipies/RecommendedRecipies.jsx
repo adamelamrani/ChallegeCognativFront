@@ -4,7 +4,7 @@ import fakeRecommendations from "../../utils/fakeRecommendations";
 const RecommendedRecipies = () => {
   return (
     <div>
-      <h1 className="title">Recommended</h1>
+      <h2 className="title">Recommended</h2>
       <div className="recommendations">
         {fakeRecommendations.map((item) => {
           return (

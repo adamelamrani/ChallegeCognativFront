@@ -3,11 +3,13 @@ import DetailsRecipe from "../../components/DetailsRecipe/DetailsRecipe";
 import fakeRecipies from "../../utils/fakeRecipies";
 import "./style.css";
 
-export default function Detail() {
+const Detail = () => {
   const { id } = useParams();
 
-  const detailsRecipe = fakeRecipies.filter((recipe) => recipe._id === id);
+  const recipeDetails = fakeRecipies.filter((recipe) => recipe._id === id);
+  const [recipeObject] = recipeDetails;
 
-  const [recipeObject] = detailsRecipe;
   return <DetailsRecipe recipeObject={recipeObject} />;
-}
+};
+
+export default Detail;

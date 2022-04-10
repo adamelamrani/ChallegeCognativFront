@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <div className="header">
         <Link to="/">
-          <h1>Food recipes</h1>
+          <h2>Food recipes</h2>
         </Link>
       </div>
       <div className="page">

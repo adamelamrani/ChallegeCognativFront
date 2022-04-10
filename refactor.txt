@@ -13,6 +13,15 @@ My first has been to modularise Home page and extract from it two components and
   -Photo: 
     I decided to remove the functions renderImage and renderImageBox as I have added a conditional checking if item.photo exists or not.
     
-  -Details: Extracted the component part from Detail page into DetailsRecipe component. Corrected the details page to always show the data from the selected recipe. To do that, I changed how
+  -Details:
+    Extracted the component part from Detail page into DetailsRecipe component. Corrected the details page to always show the data from the selected recipe. To do that, I changed how
     Link path to add the id of the requested recipe, and the id will be get through params with useParams. After getting the id, the page will filter that id to find the desired recipe and
     it will pass the data (destructuring it first) through props.
+    Changed all headings. H1 is only for the recipe name, as it is the most important element semantically speaking. Now headings related to topics have been changed to h2 and subtopics to h3.
+
+  -Heading:
+    Moved heading from details to App, as it should be displayed in every page of the app.
+
+  -Recipies: 
+    Changed the div containing the info to an unordered list, and <p> elements to list items as it is semantically better in that case.
+    Changed order between category and recipe name. Now recipe name will be displayed above the category name.
