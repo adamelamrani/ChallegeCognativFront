@@ -9,7 +9,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <LayoutHeaderStyle className="header">
         <Link to="/">
-          <h2>Food recipes</h2>
+          <h2>Food recipies</h2>
         </Link>
       </LayoutHeaderStyle>
       {children}
