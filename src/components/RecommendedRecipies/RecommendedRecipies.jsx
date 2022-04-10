@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import fakeRecommendations from "../../utils/fakeRecommendations";
+import fakeRecipies from "../../utils/fakeRecipies";
 
 const RecommendedRecipies = () => {
   return (
-    <div>
-      <h1 className="title">Recommended</h1>
+    <div className="recommended-container">
+      <h2 className="title">Recommended</h2>
       <div className="recommendations">
-        {fakeRecommendations.map((item) => {
+        {fakeRecipies.map((item) => {
           return (
             <Link to={`/detail/${item._id}`} key={item._id}>
               <img
