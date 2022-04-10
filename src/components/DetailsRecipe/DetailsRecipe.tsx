@@ -1,4 +1,11 @@
-const DetailsRecipe = ({ recipeObject }) => {
+import React from "react";
+import { Recipe } from "../../interfaces/Recipe";
+
+interface RecipeObjectProps {
+  recipeObject: Recipe;
+}
+
+const DetailsRecipe = ({ recipeObject }: RecipeObjectProps): JSX.Element => {
   return (
     <div className="page">
       <div className="top">

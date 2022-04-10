@@ -25,3 +25,4 @@ My first has been to modularise Home page and extract from it two components and
   -Recipies: 
     Changed the div containing the info to an unordered list, and <p> elements to list items as it is semantically better in that case.
     Changed order between category and recipe name. Now recipe name will be displayed above the category name.
+    Removed fakeData and fakeRecipies in order to avoid repeating unnecessary code. Instead, created a carousel to show recommendations.

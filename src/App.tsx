@@ -2,7 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/recipe/Detail";
 
-function App() {
+const App: React.FunctionComponent = (): JSX.Element => {
   return (
     <>
       <div className="header">
@@ -16,6 +16,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
