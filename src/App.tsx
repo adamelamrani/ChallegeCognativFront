@@ -6,12 +6,12 @@ import Detail from "./pages/recipe/Detail";
 const App = () => {
   return (
     <>
-      <Routes>
-        <Layout>
+      <Layout>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
-        </Layout>
-      </Routes>
+        </Routes>
+      </Layout>
     </>
   );
 };

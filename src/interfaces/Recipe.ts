@@ -10,7 +10,7 @@ export interface Recipe {
   recommended?: number;
   ingredients: Array<string>;
   description: string;
-  photo: string;
+  photo?: string;
 }
 
 export type RecipiesArray = Recipe[];
