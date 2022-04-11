@@ -43,4 +43,26 @@ My first has been to modularise Home page and extract from it two components and
   -Responsive design:
     Added media query at 600px as requested in the exercice. For it, I have changed some things such as flex direction display in details (from row to column), changed font size to be
     a bit smaller and fit better, created a new link element which is only showing with media max-width 600px to show an arrow instead of the "see more" button".
-    
+
+  -Folder structure: 
+    I have created a new folder structure with the following criteria:
+      - Pages: In this folder we will only find Home and Recipe folder. Those folders contain the files that will render each respective components. 
+      · Home: Home page responsibility is to render the Recipies container and the Recommended recipies carousel.
+      · Detail: Detail page's responsibility is to render all the details of a single recipe.
+
+      -Components: In this folder we will find all the components that compose a page. Due to the simplicity of this application, I have decided to keep it simple with 4 major components.
+      · DetailsRecipe: In this folder you can find the DetailsRecipe component, its corresponding styled component file and a unit test file. 
+        The component will render all the information in regard with the recipe.
+
+      · Layout: This folder contains the Layout component, its corresponding style component file and a unit test file.
+        The component was wrapped around App in order to be displayed in every page, and it's main responsibility is to render a link with a heading.
+
+      · Recipies: This folder contains the Recipies component, its corresponding styled component and a unit test file.
+        The component responsibility is to render a card for each recipe with a photo and some information regarding the recipe. Due to the low complexity of this exercicie
+        I decided to keep it in just a component, but in larger projects would be better to divide it in two different components. A component that creates a single card with the information
+        that it receives, and another component that contains the cards rendered in the previous component.
+
+      · RecommendedRecipies: The folder contains a RecommendedRecipies component and its corresponding styled component.
+        His responsibility is to render a list of clickable images that will redirect us to the detail page of each recipe.
+        I decided to make this component a carousel in order to make it fit better either in desktop or with 600px media, always maintaining the proposed structure.
+             
